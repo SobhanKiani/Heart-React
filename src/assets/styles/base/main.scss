@@ -1,0 +1,24 @@
+html {
+  overflow: auto;
+  height: 100%;
+  font-size: 62.5%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  // max-width: 1024px;
+}
+
+#root {
+  height: 100%;
+}
+
+body > #root > div {
+  height: 100%;
+}
+
+* {
+  box-sizing: border-box;
+}

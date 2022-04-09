@@ -1,24 +1,26 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { SocketInitializer, Toast } from "components";
+import { Route, Routes } from "react-router-dom";
+
+import { routes } from "./misc/routes/routes";
+import PrivateRoute from "misc/routes/PrivateRoute";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <SocketInitializer>
+        <Routes>
+          {routes.map((route, key) =>
+            route.private ? (
+              <Route element={<PrivateRoute />}>
+                <Route {...route} key={key} />
+              </Route>
+            ) : (
+              <Route key={key} {...route} />
+            )
+          )}
+        </Routes>
+      </SocketInitializer>
+      <Toast />
     </div>
   );
 }

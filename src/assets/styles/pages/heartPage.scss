@@ -1,0 +1,65 @@
+.main-page {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  // justify-content: center;
+  overflow: hidden;
+  position: relative;
+
+  &__emoji-wrapper {
+    margin-right: 1.2rem;
+  }
+
+  &__info {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 1.8rem;
+  }
+  &__contact {
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    border: 2px solid rgb(255, 105, 105);
+    width: 100%;
+    height: max-content;
+    align-self: center;
+    font-size: 1.8rem;
+    border-radius: 8px;
+    padding: 1.8rem 1.2rem;
+    transition: 0.3s;
+    box-shadow: 3px 3px 3px gray;
+    z-index: 6;
+    background-color: #fff;
+
+    &:hover {
+      box-shadow: none;
+    }
+
+    &.last-seen {
+      align-self: flex-end;
+      justify-self: flex-end;
+      border-radius: 8px 8px 0 0;
+      background-color: #fff;
+    }
+  }
+}
+
+.send-heart-wrapper {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  height: 80%;
+  width: 100%;
+  // position: relative;
+}
+
+.send-heart {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 45%;
+}

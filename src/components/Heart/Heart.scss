@@ -1,0 +1,113 @@
+.heart-radar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+
+.heart {
+  animation-name: scaler;
+  animation-duration: 2.5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1);
+  cursor: pointer;
+  position: absolute;
+  z-index: 1;
+}
+
+.radar {
+  border-radius: 50%;
+  border: 1px solid #ff4141;
+  position: absolute;
+  // top: 50%;
+  // left: 50%;
+  // transform: translate(-50%, -50%);
+
+  animation-name: scalerRadar;
+  animation-duration: 2.5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1);
+
+  &.red {
+    border: 1px solid #ff4141;
+  }
+
+  &.yellow {
+    border: 1px solid #dfc800;
+  }
+
+  &.xxs {
+    width: 30%;
+    padding-bottom: 30%;
+    // z-index: -6;
+    animation-delay: 1s;
+  }
+  &.xs {
+    width: 65%;
+    padding-bottom: 65%;
+    // z-index: -5;
+    animation-delay: 1.5s;
+  }
+  &.s {
+    width: 85%;
+    padding-bottom: 85%;
+    // z-index: -4;
+    animation-delay: 2s;
+  }
+  &.m {
+    width: 105%;
+    padding-bottom: 105%;
+    // z-index: -3;
+    animation-delay: 2.5s;
+  }
+  &.b {
+    width: 125%;
+    padding-bottom: 125%;
+    // z-index: -2;
+    animation-delay: 3s;
+  }
+  &.xb {
+    width: 145%;
+    padding-bottom: 145%;
+    // z-index: -1;
+    animation-delay: 3.5s;
+  }
+  &.xxb {
+    width: 165%;
+    padding-bottom: 165%;
+    // z-index: -1;
+    animation-delay: 4s;
+  }
+  &.xxxb {
+    width: 185%;
+    padding-bottom: 185%;
+    // z-index: -1;
+  }
+}
+
+@keyframes scaler {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.25);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes scalerRadar {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.02);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
